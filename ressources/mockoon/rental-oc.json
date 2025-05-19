@@ -1,20 +1,20 @@
 {
-  "uuid": "7bd3e9f8-63b1-4862-98a8-f4f4cf4806a0",
-  "lastMigration": 22,
+  "uuid": "929d3bc8-2de4-4cb8-9816-9fe33df04b26",
+  "lastMigration": 33,
   "name": "Rental oc",
   "endpointPrefix": "api",
   "latency": 0,
   "port": 3001,
-  "hostname": "0.0.0.0",
+  "hostname": "",
   "routes": [
     {
-      "uuid": "822a0106-1c27-4f6b-92d0-89da3da205cf",
+      "uuid": "fc61a606-4a06-4d94-bc0d-b9ec0c914bea",
       "documentation": "",
       "method": "post",
       "endpoint": "auth/register",
       "responses": [
         {
-          "uuid": "28fc815b-1c32-431f-8c4b-cdf017a9ce04",
+          "uuid": "cf963000-2ac6-4e51-8812-cb2a938b976a",
           "body": "{}",
           "latency": 0,
           "statusCode": 400,
@@ -48,10 +48,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "5581d247-579a-40ac-a82a-89cddbc9ef5d",
+          "uuid": "679311c3-6937-4cf0-beb8-b4a7a6ab2d84",
           "body": "{\n  \"token\": \"jwt\"\n}",
           "latency": 0,
           "statusCode": 200,
@@ -63,20 +67,26 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "f5164abe-efa9-44f1-8dee-54ba19bfdd4d",
+      "uuid": "a55b7c46-f281-4627-abc9-c71811922ed9",
       "documentation": "",
       "method": "post",
       "endpoint": "auth/login",
       "responses": [
         {
-          "uuid": "c6fb6692-c05f-4aac-8af0-69e8647d368b",
+          "uuid": "6e9a9bed-57a0-4070-9733-4baa7db42f57",
           "body": "{\n  \"token\": \"jwt\"\n}",
           "latency": 0,
           "statusCode": 200,
@@ -103,10 +113,14 @@
           "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": true,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "1fffa3cd-b1cc-472c-9759-25e1b0693d2f",
+          "uuid": "bf2c4e7e-4528-49f1-b40f-87f489386865",
           "body": "{\n  \"message\": \"error\"\n}",
           "latency": 0,
           "statusCode": 401,
@@ -133,20 +147,26 @@
           "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "7eca689a-296c-44d0-ad11-ab666af036d8",
+      "uuid": "00ac135f-f941-4aba-a01e-14d00717e094",
       "documentation": "",
       "method": "post",
       "endpoint": "messages",
       "responses": [
         {
-          "uuid": "57ee1095-96b7-4635-992c-d3866f0c19dd",
+          "uuid": "dea6dbd3-e8e8-499c-bdc1-2ea1dfe59fb6",
           "body": "{\n  \"message\": \"Message send with success\"\n}",
           "latency": 0,
           "statusCode": 200,
@@ -158,10 +178,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "5b6feffb-838b-4d88-8beb-fe4f9b22a4c8",
+          "uuid": "ca90fef6-ffc2-45ba-9cbc-4d3372da69f3",
           "body": "",
           "latency": 0,
           "statusCode": 401,
@@ -181,10 +205,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "b6b06e48-2471-4919-b589-e5a223f68c3a",
+          "uuid": "589c6d3f-bbe4-488d-a8a4-539930e1ac34",
           "body": "{}",
           "latency": 0,
           "statusCode": 400,
@@ -218,20 +246,26 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "9fddcd86-c150-46f2-8dd0-4bca98c410ec",
+      "uuid": "8050c52e-53c6-4403-a6fa-a751d739a71c",
       "documentation": "",
       "method": "get",
       "endpoint": "auth/me",
       "responses": [
         {
-          "uuid": "5a37f124-6126-4ccd-92c0-04d94cdb636b",
+          "uuid": "579a6d5f-9a46-42e9-abca-c072420fd459",
           "body": "{}",
           "latency": 0,
           "statusCode": 401,
@@ -251,10 +285,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "bc3569c4-1386-4cdf-b142-158c847480ba",
+          "uuid": "eeedeecc-e7ae-40ce-988a-5adcc922cd5a",
           "body": "{\n  \"id\": 1,\n\t\"name\": \"Test TEST\",\n\t\"email\": \"test@test.com\",\n\t\"created_at\": \"2022/02/02\",\n\t\"updated_at\": \"2022/08/02\"  \n}",
           "latency": 0,
           "statusCode": 200,
@@ -274,20 +312,26 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "cd933fa8-d658-4bab-a26f-ad684dbcc21e",
+      "uuid": "e7e376a2-92d4-46b7-b080-22a25658dbb8",
       "documentation": "",
       "method": "get",
       "endpoint": "rentals",
       "responses": [
         {
-          "uuid": "0165ba2e-b8f8-4c40-803b-2c0f56e7fbb4",
+          "uuid": "11358f86-ce5f-423e-8e82-bdf6bf776791",
           "body": "{ \n  \"rentals\": [\n  {\n\t\"id\": 1,\n\t\"name\": \"test house 1\",\n\t\"surface\": 432,\n\t\"price\": 300,\n\t\"picture\": \"https://blog.technavio.org/wp-content/uploads/2018/12/Online-House-Rental-Sites.jpg\",\n\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a lectus eleifend, varius massa ac, mollis tortor. Quisque ipsum nulla, faucibus ac metus a, eleifend efficitur augue. Integer vel pulvinar ipsum. Praesent mollis neque sed sagittis ultricies. Suspendisse congue ligula at justo molestie, eget cursus nulla tincidunt. Pellentesque elementum rhoncus arcu, viverra gravida turpis mattis in. Maecenas tempor elementum lorem vel ultricies. Nam tempus laoreet eros, et viverra libero tincidunt a. Nunc vel nisi vulputate, sodales massa eu, varius erat.\",\n\t\"owner_id\": 1,\n\t\"created_at\": \"2012/12/02\",\n\t\"updated_at\": \"2014/12/02\"  \n},\n{\n\t\"id\": 1,\n\t\"name\": \"test house 2\",\n\t\"surface\": 154,\n\t\"price\": 200,\n\t\"picture\": \"https://blog.technavio.org/wp-content/uploads/2018/12/Online-House-Rental-Sites.jpg\",\n\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a lectus eleifend, varius massa ac, mollis tortor. Quisque ipsum nulla, faucibus ac metus a, eleifend efficitur augue. Integer vel pulvinar ipsum. Praesent mollis neque sed sagittis ultricies. Suspendisse congue ligula at justo molestie, eget cursus nulla tincidunt. Pellentesque elementum rhoncus arcu, viverra gravida turpis mattis in. Maecenas tempor elementum lorem vel ultricies. Nam tempus laoreet eros, et viverra libero tincidunt a. Nunc vel nisi vulputate, sodales massa eu, varius erat.\",\n\t\"owner_id\": 2,\n\t\"created_at\": \"2012/12/02\",\n\t\"updated_at\": \"2014/12/02\"  \n},{\n\t\"id\": 3,\n\t\"name\": \"test house 3\",\n\t\"surface\": 234,\n\t\"price\": 100,\n\t\"picture\": \"https://blog.technavio.org/wp-content/uploads/2018/12/Online-House-Rental-Sites.jpg\",\n\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a lectus eleifend, varius massa ac, mollis tortor. Quisque ipsum nulla, faucibus ac metus a, eleifend efficitur augue. Integer vel pulvinar ipsum. Praesent mollis neque sed sagittis ultricies. Suspendisse congue ligula at justo molestie, eget cursus nulla tincidunt. Pellentesque elementum rhoncus arcu, viverra gravida turpis mattis in. Maecenas tempor elementum lorem vel ultricies. Nam tempus laoreet eros, et viverra libero tincidunt a. Nunc vel nisi vulputate, sodales massa eu, varius erat.\",\n\t\"owner_id\": 1,\n\t\"created_at\": \"2012/12/02\",\n\t\"updated_at\": \"2014/12/02\"  \n}\n  \n  ]\n}",
           "latency": 0,
           "statusCode": 200,
@@ -299,10 +343,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "8d9308a0-f580-4d74-99f2-7d179d903357",
+          "uuid": "8606b9e4-4b0c-47a9-800a-80f3874edf99",
           "body": "",
           "latency": 0,
           "statusCode": 401,
@@ -322,20 +370,26 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "4f438ee4-023d-40b8-9ed4-f22f8f12736e",
+      "uuid": "bebf91a8-1139-4e9b-b181-2c7cbbec5435",
       "documentation": "",
       "method": "get",
       "endpoint": "rentals/:id",
       "responses": [
         {
-          "uuid": "57db14b9-4de2-4348-a9db-a9376992015d",
+          "uuid": "196b63eb-bcad-469f-8b2c-840710894fdf",
           "body": "{\n\t\"id\": 1,\n\t\"name\": \"dream house\",\n\t\"surface\": 24,\n\t\"price\": 30,\n\t\"picture\": [\"https://blog.technavio.org/wp-content/uploads/2018/12/Online-House-Rental-Sites.jpg\"],\n\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a lectus eleifend, varius massa ac, mollis tortor. Quisque ipsum nulla, faucibus ac metus a, eleifend efficitur augue. Integer vel pulvinar ipsum. Praesent mollis neque sed sagittis ultricies. Suspendisse congue ligula at justo molestie, eget cursus nulla tincidunt. Pellentesque elementum rhoncus arcu, viverra gravida turpis mattis in. Maecenas tempor elementum lorem vel ultricies. Nam tempus laoreet eros, et viverra libero tincidunt a. Nunc vel nisi vulputate, sodales massa eu, varius erat.\",\n\t\"owner_id\": 1,\n\t\"created_at\": \"2012/12/02\",\n\t\"updated_at\": \"2014/12/02\"  \n}",
           "latency": 0,
           "statusCode": 200,
@@ -347,10 +401,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "a4520b9a-3369-4ef1-81cd-e4d394e90284",
+          "uuid": "15b23a0e-1862-40f7-a9f6-2afabceee2d6",
           "body": "",
           "latency": 0,
           "statusCode": 401,
@@ -370,20 +428,26 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "15afe62a-b845-4e1e-865b-a35044fbd949",
+      "uuid": "7485ac60-36dc-4ee7-b841-ee336da1d4e1",
       "documentation": "",
       "method": "post",
       "endpoint": "rentals",
       "responses": [
         {
-          "uuid": "dea1d991-2465-48e6-968f-9487eca83d70",
+          "uuid": "109573ca-3cf1-4a25-8ff3-6bada7bd395e",
           "body": "{\n  \"message\": \"Rental created !\"\n}",
           "latency": 0,
           "statusCode": 200,
@@ -395,10 +459,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "88b9b416-d39d-4350-8ded-edc5c5fe7427",
+          "uuid": "33653f1c-aaec-4158-9755-5b276dd8fd7d",
           "body": "",
           "latency": 0,
           "statusCode": 401,
@@ -418,20 +486,26 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "d83f39e5-f705-4548-ab60-007aa926df3a",
+      "uuid": "1d6f73d7-5132-40ae-8dc9-0d5c0bff2ccc",
       "documentation": "",
       "method": "put",
       "endpoint": "rentals/:id",
       "responses": [
         {
-          "uuid": "ff0540dd-9243-4d54-9235-ae72e6b365ae",
+          "uuid": "66edfd73-5714-40b3-af8a-7b4fce586407",
           "body": "{\n  \"message\": \"Rental updated !\"\n}",
           "latency": 0,
           "statusCode": 200,
@@ -443,10 +517,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "2708b2af-538b-4196-b5c2-424b49c39c3f",
+          "uuid": "e8f56bb7-4bc6-4d36-aacf-b44fbd0ec6d9",
           "body": "",
           "latency": 0,
           "statusCode": 401,
@@ -466,20 +544,26 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "fba99f12-f037-44b1-96d3-400b7778e0a9",
+      "uuid": "9831a0cf-d8a6-4d32-8047-c7cab9a054ba",
       "documentation": "",
       "method": "get",
       "endpoint": "user/:id",
       "responses": [
         {
-          "uuid": "333434fc-9d55-4c34-b897-e210599a83a8",
+          "uuid": "f313d1d6-079c-491e-9d48-ec6e9918c4b6",
           "body": "{\n  \"id\": 2,\n\t\"name\": \"Owner Name\",\n\t\"email\": \"test@test.com\",\n\t\"created_at\": \"2022/02/02\",\n\t\"updated_at\": \"2022/08/02\"  \n}",
           "latency": 0,
           "statusCode": 200,
@@ -491,10 +575,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         },
         {
-          "uuid": "e7ede5e2-bcdf-4550-bf80-55110e482199",
+          "uuid": "ddebe462-fa90-479c-9946-59d88a4d739f",
           "body": "",
           "latency": 0,
           "statusCode": 401,
@@ -514,11 +602,17 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false
+          "default": false,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "proxyMode": false,
@@ -563,5 +657,46 @@
       "key": "",
       "value": ""
     }
-  ]
+  ],
+  "data": [],
+  "folders": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "fc61a606-4a06-4d94-bc0d-b9ec0c914bea"
+    },
+    {
+      "type": "route",
+      "uuid": "a55b7c46-f281-4627-abc9-c71811922ed9"
+    },
+    {
+      "type": "route",
+      "uuid": "00ac135f-f941-4aba-a01e-14d00717e094"
+    },
+    {
+      "type": "route",
+      "uuid": "8050c52e-53c6-4403-a6fa-a751d739a71c"
+    },
+    {
+      "type": "route",
+      "uuid": "e7e376a2-92d4-46b7-b080-22a25658dbb8"
+    },
+    {
+      "type": "route",
+      "uuid": "bebf91a8-1139-4e9b-b181-2c7cbbec5435"
+    },
+    {
+      "type": "route",
+      "uuid": "7485ac60-36dc-4ee7-b841-ee336da1d4e1"
+    },
+    {
+      "type": "route",
+      "uuid": "1d6f73d7-5132-40ae-8dc9-0d5c0bff2ccc"
+    },
+    {
+      "type": "route",
+      "uuid": "9831a0cf-d8a6-4d32-8047-c7cab9a054ba"
+    }
+  ],
+  "callbacks": []
 }
